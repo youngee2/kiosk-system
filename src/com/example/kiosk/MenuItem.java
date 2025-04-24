@@ -7,10 +7,12 @@ package com.example.kiosk;
 
 
 public class MenuItem {
+
     //속성
     private String itemName; //메뉴 이름
     private double itempPrice; //메뉴 가격
     private String itemInfo; //메뉴 설명
+
 
 public MenuItem(String itemName, double itemPrice, String itemInfo){
     this.itemName=itemName;
