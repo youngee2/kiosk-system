@@ -7,20 +7,19 @@ package com.example.kiosk;
 
 
 public class MenuItem {
-
     //속성
     private String itemName; //메뉴 이름
-    private double itempPrice; //메뉴 가격
+    private double itemPrice; //메뉴 가격
     private String itemInfo; //메뉴 설명
 
-
+//생성자
 public MenuItem(String itemName, double itemPrice, String itemInfo){
     this.itemName=itemName;
-    this.itempPrice=itemPrice;
+    this.itemPrice=itemPrice;
     this.itemInfo=itemInfo;
     }
 
-
+//기능
     public String getItemName() {
         return itemName;
     }
@@ -30,11 +29,11 @@ public MenuItem(String itemName, double itemPrice, String itemInfo){
     }
 
     public double getItempPrice() {
-        return itempPrice;
+        return itemPrice;
     }
 
-    public void setItempPrice(double itempPrice) {
-        this.itempPrice = itempPrice;
+    public void setItempPrice(double itemPrice) {
+        this.itemPrice = itemPrice;
     }
 
     public String getItemInfo() {
@@ -45,6 +44,11 @@ public MenuItem(String itemName, double itemPrice, String itemInfo){
         this.itemInfo = itemInfo;
     }
 
+    public double getItemPrice() {
+        return itemPrice;
+    }
 
-
+    public void setItemPrice(double itemPrice) {
+        this.itemPrice = itemPrice;
+    }
 }
