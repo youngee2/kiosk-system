@@ -67,7 +67,7 @@ public class Kiosk {
                             """;
                     System.out.println(discountInfomsg);
                     double result=discountSelect(sc.nextInt()).printResult(price.getTotalPrice());
-                    System.out.println("주문이 완료되었습니다. 금액은 W"+ result+"입니다.");
+                    System.out.printf("주문이 완료되었습니다. 금액은 W %.2f입니다. \n",result);
                     cart.cartReset();
                     price.totalPriceReset();
                 }
@@ -111,10 +111,11 @@ public class Kiosk {
                 if (sc.nextInt() == 1) {
                     cart.add(selectedItem.getItemName(), 1, selectedItem.getItemPrice());
                     price.totalPrice(selectedItem.getItempPrice());
+                }
                 } else {
                     System.out.println("존재하지 않는 메뉴입니다.");
                 }
-            }
+
         }catch (NumberFormatException e) {
             System.out.println("숫자만 입력해주세요.");
         }
