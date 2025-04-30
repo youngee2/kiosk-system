@@ -3,7 +3,7 @@ package com.example.kiosk;
 import com.example.kiosk.cart.Cart;
 import com.example.kiosk.menu.Menu;
 import com.example.kiosk.menu.MenuItem;
-import com.example.kiosk.price.PriceItem;
+import com.example.kiosk.price.Price;
 
 import java.util.List;
 import java.util.Scanner;
@@ -15,12 +15,12 @@ public class Kiosk {
     Scanner sc = new Scanner(System.in);
     private List<Menu> menuList;
     private Cart cart;
-    private PriceItem price;
+    private Price price;
     //클래스 생성자를 통해 값을 할당
     Kiosk(List<Menu> menuList) {
         this.menuList = menuList;
         this.cart = new Cart();
-        this.price=new PriceItem();
+        this.price=new Price();
     }
 
     //등록된 메뉴 출력
@@ -57,7 +57,8 @@ public class Kiosk {
                 System.out.println("1. 주문        2. 메뉴판");
                 if(sc.nextInt()==1){
                     System.out.println("주문이 완료되었습니다. 금액은 W"+price.getTotalPrice()+"입니다.");
-                    break;
+                    cart.cartReset();
+                    price.totalPriceReset();
                 }
 
 

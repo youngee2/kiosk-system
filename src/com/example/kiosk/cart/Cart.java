@@ -1,14 +1,13 @@
 package com.example.kiosk.cart;
 
-import com.example.kiosk.price.PriceItem;
+import com.example.kiosk.price.Price;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Cart {
     //장바구니
-    List<CartItem> cartList;
-    PriceItem priceItem;
+    private List<CartItem> cartList;
     public Cart() {
         this.cartList = new ArrayList<>();
     }
@@ -33,9 +32,16 @@ public class Cart {
         }
     }
 
+    //장바구니 초기화
+    public void cartReset(){
+        cartList.clear();
+    }
+
 
 
     public List<CartItem> getCartList() {
         return cartList;
     }
+
+
 }
