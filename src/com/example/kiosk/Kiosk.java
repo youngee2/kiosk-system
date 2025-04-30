@@ -9,12 +9,14 @@ import java.util.List;
 import java.util.Scanner;
 
 import static com.example.kiosk.Main.isOnOff;
+import static com.example.kiosk.discount.UserDiscountType.discountSelect;
 
 //프로그램 순서 및 흐름 제어를 담당하는 클래스
 public class Kiosk {
     Scanner sc = new Scanner(System.in);
     private List<Menu> menuList;
     private Cart cart;
+
     private Price price;
     //클래스 생성자를 통해 값을 할당
     Kiosk(List<Menu> menuList) {
@@ -56,7 +58,16 @@ public class Kiosk {
                 price.printPrice();
                 System.out.println("1. 주문        2. 메뉴판");
                 if(sc.nextInt()==1){
-                    System.out.println("주문이 완료되었습니다. 금액은 W"+price.getTotalPrice()+"입니다.");
+                    String discountInfomsg= """
+                            할인 정보를 입력해주세요.
+                            1. 국가유공자 : 10%
+                            2. 군인 : 5%
+                            3. 학생 : 3%
+                            4. 일반 : 0%
+                            """;
+                    System.out.println(discountInfomsg);
+                    double result=discountSelect(sc.nextInt()).printResult(price.getTotalPrice());
+                    System.out.println("주문이 완료되었습니다. 금액은 W"+ result+"입니다.");
                     cart.cartReset();
                     price.totalPriceReset();
                 }
@@ -108,7 +119,6 @@ public class Kiosk {
             System.out.println("숫자만 입력해주세요.");
         }
     }
-
 
     public List<Menu> getMenuList() {
         return menuList;
