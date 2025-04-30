@@ -1,5 +1,8 @@
 package com.example.kiosk;
 
+import com.example.kiosk.menu.Menu;
+import com.example.kiosk.menu.MenuItem;
+
 import java.util.ArrayList;
 import java.util.List;
 

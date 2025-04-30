@@ -1,4 +1,4 @@
-package com.example.kiosk;
+package com.example.kiosk.menu;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +11,7 @@ public class Menu {
     private List<MenuItem> menuList; //카테고리에 맞는 메뉴 아이템을 저장할 리스트 생성
 
 
-    Menu(String category) {
+    public Menu(String category) {
         this.categoryName = category; //카테고리 지정
         this.menuList = new ArrayList<>(); 
     }
@@ -38,6 +38,8 @@ public class Menu {
     public void addItem(MenuItem item){
         menuList.add(item);
     }
+
+
 
 
 
