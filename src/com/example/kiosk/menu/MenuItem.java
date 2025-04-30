@@ -1,4 +1,4 @@
-package com.example.kiosk;
+package com.example.kiosk.menu;
 
 //세부 메뉴 속성을 가지는 클래스
 //햄버거의 이름, 가격 설명
