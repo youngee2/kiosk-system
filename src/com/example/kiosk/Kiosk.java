@@ -16,13 +16,12 @@ public class Kiosk {
     Scanner sc = new Scanner(System.in);
     private List<Menu> menuList;
     private Cart cart;
-
     private Price price;
     //클래스 생성자를 통해 값을 할당
     Kiosk(List<Menu> menuList) {
         this.menuList = menuList;
         this.cart = new Cart();
-        this.price=new Price();
+        this.price = new Price();
     }
 
     //등록된 메뉴 출력
@@ -51,7 +50,7 @@ public class Kiosk {
                 isOnOff = false; //종료
             } else if (orderMenu > 0 && orderMenu <= menuList.size()) {
                 printCategoryItems(menuList.get(orderMenu - 1));
-            } else if(orderMenu<=5){
+            } else if(orderMenu<5){
                 System.out.println("아래와 같이 주문 하시겠습니까?");
                 System.out.println("[ Orders ]");
                 cart.show();
@@ -71,10 +70,10 @@ public class Kiosk {
                     cart.cartReset();
                     price.totalPriceReset();
                 }
-
-
             }else{
                 System.out.println("처음으로 돌아갑니다. 메뉴를 선택해주세요.");
+                cart.cartReset();
+                price.totalPriceReset();
             }
 
         } catch (NumberFormatException e) {
@@ -129,5 +128,11 @@ public class Kiosk {
         this.menuList = menuList;
     }
 
+    public Cart getCart() {
+        return cart;
+    }
 
+    public Price getPrice() {
+        return price;
+    }
 }
