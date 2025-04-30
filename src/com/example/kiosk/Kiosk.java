@@ -1,11 +1,9 @@
 package com.example.kiosk;
 
 import com.example.kiosk.cart.Cart;
-import com.example.kiosk.cart.CartItem;
 import com.example.kiosk.menu.Menu;
 import com.example.kiosk.menu.MenuItem;
-import com.example.price.Price;
-import com.example.price.PriceItem;
+import com.example.kiosk.price.PriceItem;
 
 import java.util.List;
 import java.util.Scanner;

@@ -1,6 +1,6 @@
 package com.example.kiosk.cart;
 
-import com.example.price.PriceItem;
+import com.example.kiosk.price.PriceItem;
 
 import java.util.ArrayList;
 import java.util.List;

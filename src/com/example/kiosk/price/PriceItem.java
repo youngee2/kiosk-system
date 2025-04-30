@@ -1,4 +1,4 @@
-package com.example.price;
+package com.example.kiosk.price;
 
 public class PriceItem {
     private double totalPrice;
