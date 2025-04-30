@@ -17,8 +17,8 @@ public class Price {
     }
 
     //기존 장바구니 결제 가격 초기화
-    public double totalPriceReset() {
-        return totalPrice=0;
+    public void totalPriceReset() {
+        totalPrice=0;
     }
 
     public double getTotalPrice() {
