@@ -7,14 +7,15 @@ public class CartItem {
     private double price;
 
 
-    public CartItem(String itemName,int quantity, double price){
-        this.itemName=itemName;
-        this.quantity=quantity;
-        this.price=price;
+    //생성자
+    public CartItem(String itemName, int quantity, double price) {
+        this.itemName = itemName;
+        this.quantity = quantity;
+        this.price = price;
     }
 
-    //
-    public void addQuantity(){
+    //장바구니에 같은 제품을 담으면 기존 수량에 더해지는 메서드
+    public void addQuantity() {
         this.quantity++;
     }
 
@@ -22,24 +23,13 @@ public class CartItem {
         return itemName;
     }
 
-    public void setItemName(String itemName) {
-        this.itemName = itemName;
-    }
-
     public int getQuantity() {
         return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
     }
 
     public double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
 
 }

@@ -12,43 +12,27 @@ public class MenuItem {
     private double itemPrice; //메뉴 가격
     private String itemInfo; //메뉴 설명
 
-//생성자
-public MenuItem(String itemName, double itemPrice, String itemInfo){
-    this.itemName=itemName;
-    this.itemPrice=itemPrice;
-    this.itemInfo=itemInfo;
+    //생성자
+    public MenuItem(String itemName, double itemPrice, String itemInfo) {
+        this.itemName = itemName;
+        this.itemPrice = itemPrice;
+        this.itemInfo = itemInfo;
     }
 
-//기능
+
     public String getItemName() {
         return itemName;
-    }
-
-    public void setItemName(String itemName) {
-        this.itemName = itemName;
     }
 
     public double getItempPrice() {
         return itemPrice;
     }
 
-    public void setItempPrice(double itemPrice) {
-        this.itemPrice = itemPrice;
-    }
-
     public String getItemInfo() {
         return itemInfo;
     }
 
-    public void setItemInfo(String itemInfo) {
-        this.itemInfo = itemInfo;
-    }
-
     public double getItemPrice() {
         return itemPrice;
-    }
-
-    public void setItemPrice(double itemPrice) {
-        this.itemPrice = itemPrice;
     }
 }

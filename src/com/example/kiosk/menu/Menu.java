@@ -13,7 +13,7 @@ public class Menu {
 
     public Menu(String category) {
         this.categoryName = category; //카테고리 지정
-        this.menuList = new ArrayList<>(); 
+        this.menuList = new ArrayList<>();
     }
 
 
@@ -21,26 +21,14 @@ public class Menu {
         return categoryName;
     }
 
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
-    }
-
-
     public List<MenuItem> getMenuList() {
         return menuList;
     }
 
-    public void setMenuList(List<MenuItem> menuList) {
-        this.menuList = menuList;
-    }
-
     //해당 카테고리의 맞는 아이템메뉴 추가.
-    public void addItem(MenuItem item){
+    public void addItem(MenuItem item) {
         menuList.add(item);
     }
-
-
-
 
 
 }
