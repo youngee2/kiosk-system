@@ -7,10 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 //프로그램 시작점
-public class Main{
-    
+public class Main {
+
     //키오스크 전원
-    static boolean isOnOff=true;
+    static boolean isOnOff = true;
 
     public static void main(String[] args) {
         //햄버거 메뉴 카테고리
@@ -33,8 +33,8 @@ public class Main{
         desserts.addItem(new MenuItem("치즈볼", 6.0, "쫄깃 치즈볼"));
         desserts.addItem(new MenuItem("치즈스틱", 3.5, "쭈욱 늘어나는 치즈스틱"));
 
-        
-        List<Menu> menuList=new ArrayList<>();
+
+        List<Menu> menuList = new ArrayList<>();
 
         menuList.add(burgers); //카테고리에 버거 추가
         menuList.add(drinks); //카테고리에 음료 추가
